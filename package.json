@@ -1,0 +1,52 @@
+{
+  "name": "@nodeflex/n8n-nodes-nodeflex",
+  "version": "0.1.1",
+  "description": "n8n community node package for executing private workflows via the NodeFlex SignalR hub",
+  "keywords": ["n8n-community-node-package", "nodeflex", "private workflow", "signalr"],
+  "license": "MIT",
+  "homepage": "https://github.com/NodeFlexIO/PrivateWorkflow#readme",
+  "author": { "name": "J. Robert Tryon, Jr.", "email": "bobtryon@nodeflex.io" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeFlexIO/PrivateWorkflow.git"
+  },
+  "bugs": { "url": "https://github.com/NodeFlexIO/PrivateWorkflow/issues" },
+  "engines": { "node": ">=20.15" },
+  "main": "index.js",
+  "scripts": {
+    "build": "n8n-node build",
+    "build:watch": "tsc --watch",
+    "dev": "n8n-node dev",
+    "format": "prettier nodes credentials --write",
+    "lint": "n8n-node lint",
+    "lintfix": "n8n-node lint --fix",
+    "release": "n8n-node release",
+    "prepublishOnly": "n8n-node prerelease"
+  },
+  "files": ["dist"],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": [
+      "dist/credentials/PrivateWorkflowApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/PrivateWorkflowTrigger/PrivateWorkflowTrigger.node.js",
+      "dist/nodes/ExecutePrivateWorkflow/ExecutePrivateWorkflow.node.js",
+      "dist/nodes/RespondToPrivateWorkflow/RespondToPrivateWorkflow.node.js",
+      "dist/nodes/GetPrivateWorkflowResult/GetPrivateWorkflowResult.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "^0.23.1",
+    "@types/node": "^24.10.1",
+    "@types/ws": "^8.18.1",
+    "eslint": "^9.39.4",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.5.3",
+    "release-it": "^19.2.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": { "n8n-workflow": "^1.113.0" }
+}

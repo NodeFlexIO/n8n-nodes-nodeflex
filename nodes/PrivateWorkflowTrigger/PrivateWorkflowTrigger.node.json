@@ -1,0 +1,18 @@
+{
+	"node": "@nodeflex/n8n-nodes-nodeflex.privateWorkflowTrigger",
+	"nodeVersion": "1",
+	"codexVersion": "1.0",
+	"categories": ["Trigger"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://www.nodeflex.io/docs/credentials"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://www.nodeflex.io/docs"
+			}
+		]
+	}
+}

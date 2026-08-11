@@ -1,0 +1,18 @@
+{
+	"node": "@nodeflex/n8n-nodes-nodeflex.getPrivateWorkflowResult",
+	"nodeVersion": "1",
+	"codexVersion": "1.0",
+	"categories": ["Development", "Communication"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://www.nodeflex.io/docs/credentials"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://www.nodeflex.io/docs"
+			}
+		]
+	}
+}
