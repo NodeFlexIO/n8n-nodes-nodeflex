@@ -14,7 +14,7 @@ yarn.lock
 *.tgz
 tsconfig.tsbuildinfo
 
-# Local secrets for integration tests (see docs/testing.md) — never commit real API keys
+# Local secrets for integration tests — never commit real API keys
 .env.test.local
 .env*.local
 
@@ -24,3 +24,12 @@ tsconfig.tsbuildinfo
 !.github/workflows/
 .vscode/*
 node_modules/*
+
+# Development-only tooling carried over from the monorepo checkout — not
+# needed to build, test, or publish this package. Live docs/scripts/tests
+# for these belong in the development repo, not here.
+style.analysis
+docs/testing.md
+scripts/run-integration-tests.mjs
+vitest.integration.config.mts
+tests/integration/
